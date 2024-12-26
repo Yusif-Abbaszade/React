@@ -1,0 +1,18 @@
+
+.forbig{
+    display: block;
+}
+
+.forsml {
+    display: none;
+}
+
+@media (max-width:1080px) {
+    .forsml {
+        display: flex;
+        justify-content: space-between;
+    }
+    .forbig{
+        display: none;
+    }
+}
