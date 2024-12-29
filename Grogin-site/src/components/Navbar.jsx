@@ -7,7 +7,16 @@ import search from '../assets/img/search.png'
 import sale from '../assets/img/sale.png'
 import menu from '../assets/img/menu.png'
 
-const Navbar = () => {
+const Navbar = ({searchText, setSearchText, data, setData, backup, setBackup}) => {
+  
+  const updateSearchText = (event) =>{
+    setSearchText(event.target.value);
+    setData(backup.filter(item=>(
+      item.title.toLowerCase().includes(searchText) ||
+      item.description.toLowerCase().includes(searchText)
+    )));
+  };
+  
   return (
     <>
     <div className="container-fluid forbig">
@@ -31,7 +40,7 @@ const Navbar = () => {
       </div>
       <div className="middle-side navbar d-flex">
         <img src={logo} alt="sa" width={"150px"} />
-        <div className="searchbar" style={{background:"#f3f4f6"}}><input className='inputbox' role='search' type="text" style={{width:"700px", border:"none", height:"40px", background:"#f3f4f6"}}/><img src={search} alt="" width={"24px"} className='mb-1 mx-2'/></div>
+        <div className="searchbar" style={{background:"#f3f4f6"}}><input className='inputbox' role='search' type="text" style={{width:"700px", border:"none", height:"40px", background:"#f3f4f6"}} onChange={updateSearchText}/><img src={search} alt="" width={"24px"} className='mb-1 mx-2'/></div>
         <div className="right-side">
           <ul className='list-unstyled d-flex gap-3'>
             <li><a href="#"><img width={"28px"} src={profile} alt="" /></a></li>
