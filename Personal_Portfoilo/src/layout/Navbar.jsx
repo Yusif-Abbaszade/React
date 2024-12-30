@@ -9,9 +9,7 @@ import { IconContext } from "react-icons/lib";
 import { MdExitToApp } from "react-icons/md";
 import '../assets/css/navbar.css'
 import { useState } from "react";
-const Navbar = () => {
-
-  const [thmColor, setThmColor] = useState('white');
+const Navbar = ({thmColor, setThmColor}) => {
   const theme = {
     dark:{
         logo : mainlogo_light,
@@ -33,7 +31,30 @@ const Navbar = () => {
     document.querySelector('#logo').attributes[0].value = theme.dark.logo;
     document.querySelector('.theme-sec').style.background = theme.dark.sliderbg;
     document.querySelector('.theme-sec').style.border = theme.dark.sliderborder;
+    [...document.querySelectorAll('.home-sections li .btn img')].map((item)=>{
+        item.style.filter = 'brightness(100)';
+    });
+    [...document.querySelectorAll('.home-sections li .btn')].map((item)=>{
+        item.style.background = '#1f3434';
+        item.style.border = '1px solid #364949';
+    });
+    document.querySelector('.maincardhb').style.color = 'white';
+    document.querySelector('#home').style.color = 'white';
+    document.querySelector('#aboutus').style.color = 'white';
     setThmColor('white');
+    [...document.querySelectorAll('.aboutcardmain .card-title')].map((item)=>{
+        item.style.color = 'white';
+    });
+    [...document.querySelectorAll('.aboutcard .card-title')].map((item)=>{
+        item.style.color = 'white';
+    });
+    [...document.querySelectorAll('.aboutcardmain .card-text')].map((item)=>{
+        item.style.color = 'white';
+    });
+    [...document.querySelectorAll('.aboutcard .card-text')].map((item)=>{
+        item.style.color = 'white';
+    });
+    document.querySelector('.ltswrktgtr').style.color = 'white';
 };
 const handleSunBtn = ()=>{
     document.querySelector('.moonbtn').style = 'background:none;'
@@ -43,7 +64,30 @@ const handleSunBtn = ()=>{
     document.querySelector('#logo').attributes[0].value = theme.light.logo;
     document.querySelector('.theme-sec').style.background = theme.light.sliderbg;
     document.querySelector('.theme-sec').style.border = theme.light.sliderborder;
-    setThmColor('black');
+    [...document.querySelectorAll('.btnimg')].map((item)=>{
+        item.style.filter = 'brightness(0)';
+    });
+    [...document.querySelectorAll('.home-sections li .btn')].map((item)=>{
+        item.style.background = '#dcdde2';
+        item.style.border = '1px solid #ccd0da';
+    });
+    document.querySelector('.maincardhb').style.color = 'black';
+    document.querySelector('#home').style.color = 'black';
+    document.querySelector('#aboutus').style.color = 'black';
+    [...document.querySelectorAll('.aboutcardmain .card-title')].map((item)=>{
+        item.style.color = 'black';
+    });
+    [...document.querySelectorAll('.aboutcard .card-title')].map((item)=>{
+        item.style.color = 'black';
+    });
+    [...document.querySelectorAll('.aboutcardmain .card-text')].map((item)=>{
+        item.style.color = 'black';
+    });
+    [...document.querySelectorAll('.aboutcard .card-text')].map((item)=>{
+        item.style.color = 'black';
+    });
+    document.querySelector('.ltswrktgtr').style.color = 'black';
+    setThmColor('black');//#aboutcardmain
   };
 
   const openLeftMenu = ()=>{
@@ -108,7 +152,7 @@ const handleSunBtn = ()=>{
             </button>
         </div>
     </div>
-    <div className="leftmenusec" style={{position:"fixed", top:"0", zIndex:"1", width:"100%", height:"100%", background:"#061d1e"}}>
+    <div className="leftmenusec" style={{position:"fixed", top:"0", zIndex:"1", width:"100%", height:"100%", background:"#061d1e", overflow:"scroll"}}>
         <button className="btn float-end" onClick={closeLeftMenu}>
         <IconContext.Provider value={{size:"2.8em", color:"white"}}>
             <div>

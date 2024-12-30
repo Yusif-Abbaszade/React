@@ -1,0 +1,16 @@
+.aboutcard, .aboutcardmain {
+    background: none !important;
+    backdrop-filter: blur(20px);
+    border: 1px solid #37484c;
+    color: white !important;
+    padding: 10px;
+}
+
+.aboutcard:hover, .aboutcardmain:hover {
+    border: 1px solid goldenrod;
+    transform: translateY(-10px);
+}
+
+.social-links li a>div:hover{
+    transform: translateY(-8px);
+}

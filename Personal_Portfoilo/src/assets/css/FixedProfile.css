@@ -1,0 +1,49 @@
+.home-sections li .btn {
+    position: relative;
+    border: 1px solid #364949;
+    background: #1f3434;
+    div {
+        color: black;
+        position: absolute;
+        width: 150px;
+        background-color: goldenrod;
+        height: 100%;
+        border-radius: 10px;
+        z-index: 2;
+        top: 0;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        font-size: 20px;
+    }
+}
+
+.home-sections li .btn:hover {
+    background-color: goldenrod !important;
+    div{
+        transition: 2s;
+        display: flex;
+        transform: translateX(70px);
+    }
+}
+
+.card .card-body {
+    .social-links {
+        li a>div:hover{
+            transform: translateY(-8px);
+        }
+    }
+    .downloadbrn:hover {
+        background: none !important;
+        color: white;
+        border: 1px solid white;
+    }
+}
+
+@media (max-width:876px) {
+    .fixed-profile {
+        /* position: none; */
+        /* display: block; */
+        width: 200% !important;
+    }
+}

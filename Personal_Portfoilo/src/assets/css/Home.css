@@ -1,0 +1,38 @@
+.circle {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    display: flex;
+    background: none;
+    backdrop-filter: blur(5px);
+    border: 2px solid #ffffff;
+    justify-content: center;
+    align-items: center;
+    .text{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        animation: anim 20s linear infinite;
+        span{
+            position: absolute;
+            left: 50%;
+            font-size: 1em;
+            transform-origin: 0 74px;
+        }
+    }
+}
+@keyframes anim {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+
+
+.ltswrktgtr:hover {
+    background-color: goldenrod;
+}
