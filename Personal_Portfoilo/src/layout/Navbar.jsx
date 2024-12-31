@@ -55,6 +55,8 @@ const Navbar = ({thmColor, setThmColor}) => {
         item.style.color = 'white';
     });
     document.querySelector('.ltswrktgtr').style.color = 'white';
+    document.querySelector('#ourservice').style.color = 'white';
+    document.querySelector('#myskill').style.color = 'white';
 };
 const handleSunBtn = ()=>{
     document.querySelector('.moonbtn').style = 'background:none;'
@@ -88,6 +90,8 @@ const handleSunBtn = ()=>{
     });
     document.querySelector('.ltswrktgtr').style.color = 'black';
     setThmColor('black');//#aboutcardmain
+    document.querySelector('#ourservice').style.color = 'black';
+    document.querySelector('#myskill').style.color = 'black';
   };
 
   const openLeftMenu = ()=>{

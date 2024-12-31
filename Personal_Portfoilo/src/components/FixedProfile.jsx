@@ -21,12 +21,12 @@ const FixedProfile = ({thmColor, setThmColor}) => {
       <ul className="list-unstyled home-sections">
         <li className="p-3"><span className="btn" id='homebtn'><img src={home1} className='btnimg' alt="" /><div><b>Home</b></div></span></li>
         <li className="p-3"><span className="btn" id='aboutusbtn'><img src={home2} className='btnimg' alt="" /><div><b>About Us</b></div></span></li>
-        <li className="p-3"><span className="btn"><img src={home3} className='btnimg' alt="" /><div><b>Our Service</b></div></span></li>
-        <li className="p-3"><span className="btn"><img src={home4} className='btnimg' alt="" /><div><b>My Skill</b></div></span></li>
-        <li className="p-3"><span className="btn"><img src={home5} className='btnimg' alt="" /><div><b>Portfolio</b></div></span></li>
-        <li className="p-3"><span className="btn"><img src={home6} className='btnimg' alt="" /><div><b>Testimonial</b></div></span></li>
-        <li className="p-3"><span className="btn"><img src={home7} className='btnimg' alt="" /><div><b>Our Blog</b></div></span></li>
-        <li className="p-3"><span className="btn"><img src={home8} className='btnimg' alt="" /><div><b>Contact Us</b></div></span></li>
+        <li className="p-3"><span className="btn" id='ourservicebtn'><img src={home3} className='btnimg' alt="" /><div><b>Our Service</b></div></span></li>
+        <li className="p-3"><span className="btn" id='myskillbtn'><img src={home4} className='btnimg' alt="" /><div><b>My Skill</b></div></span></li>
+        <li className="p-3"><span className="btn" id='portfoliobtn'><img src={home5} className='btnimg' alt="" /><div><b>Portfolio</b></div></span></li>
+        <li className="p-3"><span className="btn" id='testimonialbtn'><img src={home6} className='btnimg' alt="" /><div><b>Testimonial</b></div></span></li>
+        <li className="p-3"><span className="btn" id='ourblogbtn'><img src={home7} className='btnimg' alt="" /><div><b>Our Blog</b></div></span></li>
+        <li className="p-3"><span className="btn" id='contactusbtn'><img src={home8} className='btnimg' alt="" /><div><b>Contact Us</b></div></span></li>
       </ul>
       <div className="card maincardhb p-2 d-flex justify-content-center align-items-center text-center" style={{width: '30%', opacity:"90%", background:"none", color:"white", maxWidth:"450px", backdropFilter:"blur(20px)"}}>
         <img src={userProfile} className="card-img-top" alt="..." style={{maxHeight:"400px", maxWidth:"400px"}} />
