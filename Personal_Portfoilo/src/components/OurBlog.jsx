@@ -45,7 +45,7 @@ const OurBlog = ({thmColor, setThmColor}) => {
           </div>
         </div>
         <div className="col-10 col-sm-6 my-4">
-          <img src={blgimg1} alt="blgimg1" width={"100%"} />
+          <img src={blgimg2} alt="blgimg1" width={"100%"} />
           <div className="secondsc fs-5 d-flex justify-content-between mt-3">
             <span>UI/UX</span>
             <span className="d-flex gap-1">
@@ -74,7 +74,7 @@ const OurBlog = ({thmColor, setThmColor}) => {
           </div>
         </div>
         <div className="col-10 col-sm-6 my-4">
-          <img src={blgimg1} alt="blgimg1" width={"100%"} />
+          <img src={blgimg3} alt="blgimg1" width={"100%"} />
           <div className="secondsc fs-5 d-flex justify-content-between mt-3">
             <span>UI/UX</span>
             <span className="d-flex gap-1">
@@ -103,7 +103,7 @@ const OurBlog = ({thmColor, setThmColor}) => {
           </div>
         </div>
         <div className="col-10 col-sm-6 my-4">
-          <img src={blgimg1} alt="blgimg1" width={"100%"} />
+          <img src={blgimg4} alt="blgimg1" width={"100%"} />
           <div className="secondsc fs-5 d-flex justify-content-between mt-3">
             <span>UI/UX</span>
             <span className="d-flex gap-1">
