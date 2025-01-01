@@ -8,6 +8,9 @@ import AboutUs from "./components/AboutUs"
 import { useEffect, useState } from "react"
 import OurService from "./components/OurService"
 import MySkill from "./components/MySkill"
+import Portfolio from "./components/Portfolio"
+import Testimonial from "./components/Testimonial"
+import OurBlog from "./components/OurBlog"
 
 const App = () => {
   const [thmColor, setThmColor] = useState('white');
@@ -155,6 +158,9 @@ const App = () => {
         <AboutUs thmColor={thmColor} setThmColor={setThmColor} />
         <OurService thmColor={thmColor} setThmColor={setThmColor} />
         <MySkill thmColor={thmColor} setThmColor={setThmColor} />
+        <Portfolio />
+        <Testimonial />
+        <OurBlog />
       </div>
     </div>
   )
