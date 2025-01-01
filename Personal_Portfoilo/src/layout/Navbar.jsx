@@ -57,6 +57,18 @@ const Navbar = ({thmColor, setThmColor}) => {
     document.querySelector('.ltswrktgtr').style.color = 'white';
     document.querySelector('#ourservice').style.color = 'white';
     document.querySelector('#myskill').style.color = 'white';
+    document.querySelector('.portfolio').style.color = 'white';
+    document.querySelector('.testimonial').style.color = 'white';
+    // document.querySelector('.cardname').style.color = 'white';
+    [...document.querySelectorAll('.cardname')].map((item)=>{
+        item.style.color = 'black';
+    });
+    document.querySelector('.ourblog').style.color = 'white';
+    document.querySelector('.contactus').style.color = 'white';
+    [...document.querySelectorAll('input')].map(item=>{
+        item.style.color = 'white';
+        item.style = 'background:#4e5e63 !important;';
+    });
 };
 const handleSunBtn = ()=>{
     document.querySelector('.moonbtn').style = 'background:none;'
@@ -89,9 +101,21 @@ const handleSunBtn = ()=>{
         item.style.color = 'black';
     });
     document.querySelector('.ltswrktgtr').style.color = 'black';
-    setThmColor('black');//#aboutcardmain
+    setThmColor('black');
     document.querySelector('#ourservice').style.color = 'black';
     document.querySelector('#myskill').style.color = 'black';
+    document.querySelector('.portfolio').style.color = 'black';
+    document.querySelector('.testimonial').style.color = 'black';
+    // document.querySelector('.cardname').style.color = 'black';
+    [...document.querySelectorAll('.cardname')].map((item)=>{
+        item.style.color = 'black';
+    });
+    document.querySelector('.ourblog').style.color = 'black';
+    document.querySelector('.contactus').style.color = 'black';
+    [...document.querySelectorAll('input')].map(item=>{
+        item.style.color = 'black';
+        item.style = 'background:#cbcfd7 !important;';
+    });
   };
 
   const openLeftMenu = ()=>{

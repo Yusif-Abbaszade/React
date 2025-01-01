@@ -12,11 +12,11 @@ const pp4 = 'https://html.vikinglab.agency/ovro/assets/img/all-images/testimonia
 
 const Testimonial = () => {
   return (
-    <div className="container-fluid">
+    <div className="container-fluid testimonial">
         <h2><img src={dlgsvg} alt="dlgsvg" />Testimonial</h2>
         <h1 style={{fontSize:"60px"}}><b>What Client Says About <span className="text-warning"><i><u>My Work</u></i></span></b></h1>
         <div className="row d-flex justify-content-center gap-4 mt-5">
-            <div className="aboutcard testimonialcard col-10 col-sm-5 rounded-2">
+            <div className="aboutcard testimonialcard col-10 col-sm-5 rounded-2" style={{border:"none"}}>
                 <IconContext.Provider value={{color:"gold", size:"1.5em", className:"mt-3"}}>
                     <div>
                         <IoIosStar />
@@ -32,12 +32,12 @@ const Testimonial = () => {
                 <div className="profile-sec d-flex flex-row gap-3 my-4 m-3">
                     <img src={pp1} alt="pp1" width={"60px"} height={"60px"} />
                     <div className="text">
-                        <div className="text-light fs-5">David Elson</div>
+                        <div className="fs-5 cardname">David Elson</div>
                         <div className="text-secondary">Ezhe Source</div>
                     </div>
                 </div>
             </div>
-            <div className="aboutcard testimonialcard col-10 col-sm-5 rounded-2">
+            <div className="aboutcard testimonialcard col-10 col-sm-5 rounded-2" style={{border:"none"}}>
                 <IconContext.Provider value={{color:"gold", size:"1.5em", className:"mt-3"}}>
                     <div>
                         <IoIosStar />
@@ -53,12 +53,12 @@ const Testimonial = () => {
                 <div className="profile-sec d-flex flex-row gap-3 my-4 m-3">
                     <img src={pp2} alt="pp2" width={"60px"} height={"60px"} className="rounded-5" />
                     <div className="text">
-                        <div className="text-light fs-5">Chris Glasser</div>
+                        <div className="fs-5 cardname">Chris Glasser</div>
                         <div className="text-secondary">Auto Works</div>
                     </div>
                 </div>
             </div>
-            <div className="aboutcard testimonialcard col-10 col-sm-5 rounded-2">
+            <div className="aboutcard testimonialcard col-10 col-sm-5 rounded-2" style={{border:"none"}}>
                 <IconContext.Provider value={{color:"gold", size:"1.5em", className:"mt-3"}}>
                     <div>
                         <IoIosStar />
@@ -74,12 +74,12 @@ const Testimonial = () => {
                 <div className="profile-sec d-flex flex-row gap-3 my-4 m-3">
                     <img src={pp3} alt="pp3" width={"60px"} height={"60px"} />
                     <div className="text">
-                        <div className="text-light fs-5">Rodger Struck</div>
+                        <div className="fs-5 cardname">Rodger Struck</div>
                         <div className="text-secondary">Specialty Restaurant Group</div>
                     </div>
                 </div>
             </div>
-            <div className="aboutcard testimonialcard col-10 col-sm-5 rounded-2">
+            <div className="aboutcard testimonialcard col-10 col-sm-5 rounded-2" style={{border:"none"}}>
                 <IconContext.Provider value={{color:"gold", size:"1.5em", className:"mt-3"}}>
                     <div>
                         <IoIosStar />
@@ -95,7 +95,7 @@ const Testimonial = () => {
                 <div className="profile-sec d-flex flex-row gap-3 my-4 m-3">
                     <img src={pp4} alt="pp4" width={"60px"} height={"60px"} />
                     <div className="text">
-                        <div className="text-light fs-5">Mary Freund</div>
+                        <div className="fs-5 cardname">Mary Freund</div>
                         <div className="text-secondary">Rink's</div>
                     </div>
                 </div>

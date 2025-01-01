@@ -11,6 +11,7 @@ import MySkill from "./components/MySkill"
 import Portfolio from "./components/Portfolio"
 import Testimonial from "./components/Testimonial"
 import OurBlog from "./components/OurBlog"
+import ContactUs from "./components/ContactUs"
 
 const App = () => {
   const [thmColor, setThmColor] = useState('white');
@@ -22,10 +23,50 @@ const App = () => {
     const aboutus = document.getElementById('aboutus');
     const ourservice = document.getElementById('ourservice');
     const myskill = document.getElementById('myskill');
+    const portfolio = document.querySelector('.portfolio');
+    const testimonial = document.querySelector('.testimonial');
+    const ourblog = document.querySelector('.ourblog');
+    const contactus = document.querySelector('.contactus');
+    //-----------------
     const homeRect = home.getBoundingClientRect();
     const aboutusRect = aboutus.getBoundingClientRect();
     const ourserviceRect = ourservice.getBoundingClientRect();
-    const myskilleRect = myskill.getBoundingClientRect();
+    const myskillRect = myskill.getBoundingClientRect();
+    const portfolioRect = portfolio.getBoundingClientRect();
+    const testimonialRect = testimonial.getBoundingClientRect();
+    const ourblogRect = ourblog.getBoundingClientRect();
+    const contactusRect = contactus.getBoundingClientRect();
+
+    //-----------------
+
+    document.getElementById('homebtn').onclick = ()=>{
+      window.scroll(0, homeRect.top);
+    };
+    document.getElementById('aboutusbtn').onclick = ()=>{
+      window.scroll(0, aboutusRect.top);
+    };
+    document.getElementById('ourservicebtn').onclick = ()=>{
+      window.scroll(0, ourserviceRect.top);
+    };
+    document.getElementById('myskillbtn').onclick = ()=>{
+      window.scroll(0, myskillRect.top);
+    };
+    document.getElementById('portfoliobtn').onclick = ()=>{
+      window.scroll(0, portfolioRect.top);
+    };
+    document.getElementById('testimonialbtn').onclick = ()=>{
+      window.scroll(0, testimonialRect.top);
+    };
+    document.getElementById('ourblogbtn').onclick = ()=>{
+      window.scroll(0, ourblogRect.top);
+    };
+    document.getElementById('contactusbtn').onclick = ()=>{
+      window.scroll(0, contactusRect.top);
+    };
+
+
+
+    //-----------------
     if(homeRect.bottom <= window.innerHeight <= homeRect.top){
       setVisibleElement('home');
     }
@@ -35,15 +76,27 @@ const App = () => {
     else if(ourserviceRect.bottom <= window.innerHeight <= ourserviceRect.top){
       setVisibleElement('ourservice');
     }
-    else if(myskilleRect.bottom <= window.innerHeight <= myskilleRect.top){
+    else if(myskillRect.bottom <= window.innerHeight <= myskillRect.top){
       setVisibleElement('myskill');
+    }
+    else if(portfolioRect.bottom <= window.innerHeight <= portfolioRect.top){
+      setVisibleElement('portfolio');
+    }
+    else if(myskillRect.testimonialRect <= window.innerHeight <= testimonialRect.top){
+      setVisibleElement('testimonial');
+    }
+    else if(ourblogRect.bottom <= window.innerHeight <= ourblogRect.top){
+      setVisibleElement('ourblog');
+    }
+    else if(contactusRect.bottom <= window.innerHeight <= contactusRect.top){
+      setVisibleElement('contactus');
     }
   };
 
 
 
   useEffect(()=>{
-    document.addEventListener('scroll', ()=>{
+      document.addEventListener('scroll', ()=>{
       checkIsVisible();
       if(visibleElement == 'home'){
         document.getElementById('homebtn').style = 'background:goldenrod;';
@@ -53,7 +106,7 @@ const App = () => {
           document.getElementById('ourservicebtn').style = 'background:#1f3434;';
           document.getElementById('myskillbtn').style = 'background:#1f3434;';
           document.getElementById('portfoliobtn').style = 'background:#1f3434;';
-          document.getElementById('testimonialebtn').style = 'background:#1f3434;';
+          document.getElementById('testimonialbtn').style = 'background:#1f3434;';
           document.getElementById('ourblogbtn').style = 'background:#1f3434;';
           document.getElementById('contactusbtn').style = 'background:#1f3434;';
         }
@@ -63,7 +116,7 @@ const App = () => {
           document.getElementById('ourservicebtn').style = 'background:#dcdde2;';
           document.getElementById('myskillbtn').style = 'background:#dcdde2;';
           document.getElementById('portfoliobtn').style = 'background:#dcdde2;';
-          document.getElementById('testimonialebtn').style = 'background:#dcdde2;';
+          document.getElementById('testimonialbtn').style = 'background:#dcdde2;';
           document.getElementById('ourblogbtn').style = 'background:#dcdde2;';
           document.getElementById('contactusbtn').style = 'background:#dcdde2;';
         }
@@ -76,7 +129,7 @@ const App = () => {
           document.getElementById('ourservicebtn').style = 'background:#1f3434;';
           document.getElementById('myskillbtn').style = 'background:#1f3434;';
           document.getElementById('portfoliobtn').style = 'background:#1f3434;';
-          document.getElementById('testimonialebtn').style = 'background:#1f3434;';
+          document.getElementById('testimonialbtn').style = 'background:#1f3434;';
           document.getElementById('ourblogbtn').style = 'background:#1f3434;';
           document.getElementById('contactusbtn').style = 'background:#1f3434;';
         }
@@ -86,7 +139,7 @@ const App = () => {
           document.getElementById('ourservicebtn').style = 'background:#dcdde2;';
           document.getElementById('myskillbtn').style = 'background:#dcdde2;';
           document.getElementById('portfoliobtn').style = 'background:#dcdde2;';
-          document.getElementById('testimonialebtn').style = 'background:#dcdde2;';
+          document.getElementById('testimonialbtn').style = 'background:#dcdde2;';
           document.getElementById('ourblogbtn').style = 'background:#dcdde2;';
           document.getElementById('contactusbtn').style = 'background:#dcdde2;';
         }
@@ -99,7 +152,7 @@ const App = () => {
           // document.getElementById('ourservicebtn').style = 'background:#1f3434;';
           document.getElementById('myskillbtn').style = 'background:#1f3434;';
           document.getElementById('portfoliobtn').style = 'background:#1f3434;';
-          document.getElementById('testimonialebtn').style = 'background:#1f3434;';
+          document.getElementById('testimonialbtn').style = 'background:#1f3434;';
           document.getElementById('ourblogbtn').style = 'background:#1f3434;';
           document.getElementById('contactusbtn').style = 'background:#1f3434;';
         }
@@ -109,7 +162,7 @@ const App = () => {
           // document.getElementById('ourservicebtn').style = 'background:#dcdde2;';
           document.getElementById('myskillbtn').style = 'background:#dcdde2;';
           document.getElementById('portfoliobtn').style = 'background:#dcdde2;';
-          document.getElementById('testimonialebtn').style = 'background:#dcdde2;';
+          document.getElementById('testimonialbtn').style = 'background:#dcdde2;';
           document.getElementById('ourblogbtn').style = 'background:#dcdde2;';
           document.getElementById('contactusbtn').style = 'background:#dcdde2;';
         }
@@ -122,7 +175,7 @@ const App = () => {
           document.getElementById('ourservicebtn').style = 'background:#1f3434;';
           // document.getElementById('myskillbtn').style = 'background:#1f3434;';
           document.getElementById('portfoliobtn').style = 'background:#1f3434;';
-          document.getElementById('testimonialebtn').style = 'background:#1f3434;';
+          document.getElementById('testimonialbtn').style = 'background:#1f3434;';
           document.getElementById('ourblogbtn').style = 'background:#1f3434;';
           document.getElementById('contactusbtn').style = 'background:#1f3434;';
         }
@@ -132,9 +185,101 @@ const App = () => {
           document.getElementById('ourservicebtn').style = 'background:#dcdde2;';
           // document.getElementById('myskillbtn').style = 'background:#dcdde2;';
           document.getElementById('portfoliobtn').style = 'background:#dcdde2;';
-          document.getElementById('testimonialebtn').style = 'background:#dcdde2;';
+          document.getElementById('testimonialbtn').style = 'background:#dcdde2;';
           document.getElementById('ourblogbtn').style = 'background:#dcdde2;';
           document.getElementById('contactusbtn').style = 'background:#dcdde2;';
+        }
+      }
+      else if(visibleElement == 'portfolio'){
+        document.getElementById('portfoliobtn').style = 'background:goldenrod;';
+        if(thmColor == 'white'){
+          document.getElementById('homebtn').style = 'background:#1f3434;';
+          document.getElementById('aboutusbtn').style = 'background:#1f3434;';
+          document.getElementById('ourservicebtn').style = 'background:#1f3434;';
+          document.getElementById('myskillbtn').style = 'background:#1f3434;';
+          // document.getElementById('portfoliobtn').style = 'background:#1f3434;';
+          document.getElementById('testimonialbtn').style = 'background:#1f3434;';
+          document.getElementById('ourblogbtn').style = 'background:#1f3434;';
+          document.getElementById('contactusbtn').style = 'background:#1f3434;';
+        }
+        else {
+          document.getElementById('homebtn').style = 'background:#dcdde2;';
+          document.getElementById('aboutusbtn').style = 'background:#dcdde2;';
+          document.getElementById('ourservicebtn').style = 'background:#dcdde2;';
+          document.getElementById('myskillbtn').style = 'background:#dcdde2;';
+          // document.getElementById('portfoliobtn').style = 'background:#dcdde2;';
+          document.getElementById('testimonialbtn').style = 'background:#dcdde2;';
+          document.getElementById('ourblogbtn').style = 'background:#dcdde2;';
+          document.getElementById('contactusbtn').style = 'background:#dcdde2;';
+        }
+      }
+      else if(visibleElement == 'testimonial'){
+        document.getElementById('testimonialbtn').style = 'background:goldenrod;';
+        if(thmColor == 'white'){
+          document.getElementById('homebtn').style = 'background:#1f3434;';
+          document.getElementById('aboutusbtn').style = 'background:#1f3434;';
+          document.getElementById('ourservicebtn').style = 'background:#1f3434;';
+          document.getElementById('myskillbtn').style = 'background:#1f3434;';
+          document.getElementById('portfoliobtn').style = 'background:#1f3434;';
+          // document.getElementById('testimonialbtn').style = 'background:#1f3434;';
+          document.getElementById('ourblogbtn').style = 'background:#1f3434;';
+          document.getElementById('contactusbtn').style = 'background:#1f3434;';
+        }
+        else {
+          document.getElementById('homebtn').style = 'background:#dcdde2;';
+          document.getElementById('aboutusbtn').style = 'background:#dcdde2;';
+          document.getElementById('ourservicebtn').style = 'background:#dcdde2;';
+          document.getElementById('myskillbtn').style = 'background:#dcdde2;';
+          document.getElementById('portfoliobtn').style = 'background:#dcdde2;';
+          // document.getElementById('testimonialbtn').style = 'background:#dcdde2;';
+          document.getElementById('ourblogbtn').style = 'background:#dcdde2;';
+          document.getElementById('contactusbtn').style = 'background:#dcdde2;';
+        }
+      }
+      else if(visibleElement == 'ourblog'){
+        document.getElementById('ourblogbtn').style = 'background:goldenrod;';
+        if(thmColor == 'white'){
+          document.getElementById('homebtn').style = 'background:#1f3434;';
+          document.getElementById('aboutusbtn').style = 'background:#1f3434;';
+          document.getElementById('ourservicebtn').style = 'background:#1f3434;';
+          document.getElementById('myskillbtn').style = 'background:#1f3434;';
+          document.getElementById('portfoliobtn').style = 'background:#1f3434;';
+          document.getElementById('testimonialbtn').style = 'background:#1f3434;';
+          // document.getElementById('ourblogbtn').style = 'background:#1f3434;';
+          document.getElementById('contactusbtn').style = 'background:#1f3434;';
+        }
+        else {
+          document.getElementById('homebtn').style = 'background:#dcdde2;';
+          document.getElementById('aboutusbtn').style = 'background:#dcdde2;';
+          document.getElementById('ourservicebtn').style = 'background:#dcdde2;';
+          document.getElementById('myskillbtn').style = 'background:#dcdde2;';
+          document.getElementById('portfoliobtn').style = 'background:#dcdde2;';
+          document.getElementById('testimonialbtn').style = 'background:#dcdde2;';
+          // document.getElementById('ourblogbtn').style = 'background:#dcdde2;';
+          document.getElementById('contactusbtn').style = 'background:#dcdde2;';
+        }
+      }
+      else if(visibleElement == 'contactus'){
+        document.getElementById('contactusbtn').style = 'background:goldenrod;';
+        if(thmColor == 'white'){
+          document.getElementById('homebtn').style = 'background:#1f3434;';
+          document.getElementById('aboutusbtn').style = 'background:#1f3434;';
+          document.getElementById('ourservicebtn').style = 'background:#1f3434;';
+          document.getElementById('myskillbtn').style = 'background:#1f3434;';
+          document.getElementById('portfoliobtn').style = 'background:#1f3434;';
+          document.getElementById('testimonialbtn').style = 'background:#1f3434;';
+          document.getElementById('ourblogbtn').style = 'background:#1f3434;';
+          // document.getElementById('contactusbtn').style = 'background:#1f3434;';
+        }
+        else {
+          document.getElementById('homebtn').style = 'background:#dcdde2;';
+          document.getElementById('aboutusbtn').style = 'background:#dcdde2;';
+          document.getElementById('ourservicebtn').style = 'background:#dcdde2;';
+          document.getElementById('myskillbtn').style = 'background:#dcdde2;';
+          document.getElementById('portfoliobtn').style = 'background:#dcdde2;';
+          document.getElementById('testimonialbtn').style = 'background:#dcdde2;';
+          document.getElementById('ourblogbtn').style = 'background:#dcdde2;';
+          // document.getElementById('contactusbtn').style = 'background:#dcdde2;';
         }
       }
     });
@@ -160,7 +305,8 @@ const App = () => {
         <MySkill thmColor={thmColor} setThmColor={setThmColor} />
         <Portfolio />
         <Testimonial />
-        <OurBlog />
+        <OurBlog thmColor={thmColor} setThmColor={setThmColor} />
+        <ContactUs />
       </div>
     </div>
   )

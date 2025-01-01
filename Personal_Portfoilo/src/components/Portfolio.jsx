@@ -8,7 +8,7 @@ const portfolio4 = 'https://html.vikinglab.agency/ovro/assets/img/all-images/por
 
 const Portfolio = () => {
   return (
-    <div className="container-fluid mt-5">
+    <div className="container-fluid mt-5 portfolio">
         <h2><img src={dlgsvg} alt="dlgsvg" />My Portfolio</h2>
         <h1 style={{fontSize:"60px"}}><b>Innovation Designs Real <span className="text-warning"><i><u>Results</u></i></span></b></h1>
         <div className="row d-flex justify-content-center">
