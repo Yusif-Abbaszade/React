@@ -37,7 +37,7 @@ export const Home = ({thmColor, setThmColor}) => {
             setArrowcolor('black');
         }
     });
-  }, [])
+  }, [thmColor])
   return (
     <div className="container-fluid d-flex flex-column" id='home'>
         <h2><img src={dlgsvg} alt="" /><span>Hi, I’m Alex, Frontend Designer</span></h2>
