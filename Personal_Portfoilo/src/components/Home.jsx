@@ -13,7 +13,7 @@ export const Home = ({thmColor, setThmColor}) => {
   useEffect(()=>{
     const text = document.querySelector('.text p');
     text.innerHTML = text.innerText.split('').map((char, index)=>(
-    `<span style="transform:rotate(${index * 5.4}deg)">${char}</span>`
+    `<span style="transform:rotate(${index * 10.8}deg)">${char}</span>`
     )).join('');
     document.querySelector('.ltswrktgtr').addEventListener("mouseenter", ()=>{
         if(thmColor == 'white'){
