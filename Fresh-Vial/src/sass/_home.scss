@@ -1,0 +1,45 @@
+@use 'mixin' as *;
+@use 'variables' as *;
+
+.home-con {
+    background-image: url('https://creativemela.com/themeforest_html/Fresh_Vial/demo/freeshvila/images/bg-1.jpg');
+    width: 100%;
+    height: 500px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    @include my();
+    .col {
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+        @include px2();
+        .maintxt {
+            color: $txt-blue;
+            font-size: $txt-headersize;
+        }
+        button {
+            width: 200px;
+            height: 60px;
+            border: none;
+            background: $txt-blue;
+            font-size: calc($txt-headersize - 34px);
+            color:white;
+            border-radius: 50px;
+            @include my();
+            box-shadow: lightblue 10px 10px 10px;
+        }
+    }
+}
+
+@media (max-width:966px) {
+    .col{
+        width: 60% !important;
+    }
+}
+@media (min-width:1205px) {
+    .col{
+        width: 35% !important;
+    }
+}

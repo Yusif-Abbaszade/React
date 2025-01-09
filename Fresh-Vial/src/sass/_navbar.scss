@@ -1,0 +1,30 @@
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    padding-top: 15px;
+    .navlinks {
+        ul{
+            list-style: none;
+            display: flex;
+            gap: 10px;
+            font-size: 20px;
+            li {
+                a{
+                    text-decoration: none;
+                    color: black;
+                    font-weight: bold;
+                    padding: 10px;
+                }
+                .active {
+                    color:blue;
+                }
+            }
+        }
+    }
+    .marketside {
+        display: flex;
+        gap:10px;
+    }
+}

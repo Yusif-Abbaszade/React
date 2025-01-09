@@ -1,0 +1,74 @@
+@use 'mixin' as *;
+.footersec {
+    background-color: #f3f9fd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    @include px();
+    .main {
+        .searchbar {
+            display: flex;
+            input {
+                height: 60px;
+                border: 2px solid #2e4db9;
+                border-radius: 50px;
+                height: 70px;
+                min-width: 300px;
+                width: 100%;
+                text-align: center;
+            }
+            button {
+                color: white;
+                background: #2e4db9;
+                padding: 20px;
+                border: none;
+                border-radius: 50px;
+                height: 70px;
+            }
+        }
+    }
+    .aboutsc {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .row {
+            gap: 50px;
+            p{
+                line-height:25px;
+            }
+            display: flex;
+            justify-content: space-between;
+            .col{
+                width: 18%;
+                ul {
+                    list-style: none;
+                    li {
+                        @include ftmt();
+                        a{
+                            text-decoration: none;
+                            color: black;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width:986px) {
+    .main {
+        display: flex;
+        flex: row;
+        align-items: center;
+        .searchbar {
+            margin-top: 0px;
+        }
+    }
+    
+}
+hr{
+    width: 80%;
+}

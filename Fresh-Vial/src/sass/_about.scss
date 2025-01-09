@@ -1,0 +1,19 @@
+@use 'variables' as *;
+
+.about-con {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    
+    .col {
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        .header-txt {
+            color: $txt-blue;
+            font-size: $txt-headersize;
+        }
+    }
+}
