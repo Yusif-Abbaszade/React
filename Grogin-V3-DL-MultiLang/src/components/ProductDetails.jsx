@@ -3,11 +3,13 @@ import { useContext, useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom"
 import slugify from "slugify";
 import { DataContext } from "../context/DataContext";
+import { PriceContext } from "../context/PriceContext";
 
 const ProductDetails = () => {
 
   const {slug} = useParams();
   const [data] = useContext(DataContext);
+  const [currency] = useContext(PriceContext);
 
   const cData = data.find(p=>slugify(p.title, {lower:true}) == slug);
 
@@ -19,7 +21,7 @@ const ProductDetails = () => {
             <div className="card-body w-50 d-flex flex-column justify-content-center">
                 <h2 className="card-title">{cData.title}</h2>
                 <p className="card-text mt-4">{cData.description}</p>
-                <p className="card-text mt-4 text-success fs-2">${cData.price}</p>
+                <p className="card-text mt-4 text-success fs-2">{currency==='USD'?cData.price:currency==='AZN'?(cData.price*1.7).toFixed(2):(cData.price*0.97).toFixed(2)} {currency}</p>
                 <Link to="/" className="btn btn-warning mt-4 w-50">Add to Card</Link>
             </div>
             </div>
