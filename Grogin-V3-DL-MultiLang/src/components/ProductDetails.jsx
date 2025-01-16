@@ -1,28 +1,15 @@
 import axios from "axios";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom"
 import slugify from "slugify";
+import { DataContext } from "../context/DataContext";
 
 const ProductDetails = () => {
 
   const {slug} = useParams();
-  const [products, setProducts] = useState([])
-  const [cData, setCData] = useState({})
+  const [data] = useContext(DataContext);
 
-  useEffect(()=>{
-    axios
-    .get('https://dummyjson.com/products')
-    .then(res=>res.data.products)
-    .then(data=>(setProducts(data)))
-    .catch(err=>console.log(err))
-    
-  },[])
-
-  useEffect(()=>{
-    setCData(products?.find(p=>slugify(p.title, {lower:true}) === slug))
-  }, [products, slug])
-
-  // const cData = products.find(p=>slugify(p.title, {lower:true}) == slug);
+  const cData = data.find(p=>slugify(p.title, {lower:true}) == slug);
 
   return (
     <div className="container mt-5 d-flex justify-content-center align-items-center" style={{height:"50vh"}}>

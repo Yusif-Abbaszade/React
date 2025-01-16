@@ -1,0 +1,14 @@
+[data-bs-theme=dark]{
+    .textbox {
+        color: black !important;
+        button {
+            color: black !important;
+        }
+    }
+    a {
+        color: white !important;
+    }
+    .lastprice {
+        color: white !important;
+    }
+}
