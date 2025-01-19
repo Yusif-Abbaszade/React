@@ -12,19 +12,32 @@ import Footer from './components/footer'
 
 
 
-const fetchData = async ()=>{
-    const comingData = await fetch("https://raw.githubusercontent.com/yusif043-bit/FakeApi/refs/heads/main/bookstoreAPI.json"); 
-    const data =  await comingData.json();
-    return data.comments;
-};
+// const fetchData = async ()=>{
+//     const comingData = await fetch("https://raw.githubusercontent.com/yusif043-bit/FakeApi/refs/heads/main/bookstoreAPI.json"); 
+//     const data =  await comingData.json();
+//     return data.comments;
+// };
 
-const data = await fetchData();
-console.log(data);
-
+// const data = await fetchData();
+// console.log(data);
 
 
 
 class App extends Component{
+
+  constructor(){
+    super();
+    this.state = {
+      data:[]
+    };
+  }
+
+  componentDidMount(){
+    fetch('https://raw.githubusercontent.com/yusif043-bit/FakeApi/refs/heads/main/bookstoreAPI.json')
+    .then(res=>res.json())
+    .catch(err=>console.log(err))
+    .then(data=>this.setState({data : data.comments}))
+  }
 
   render(){
     return(
@@ -36,13 +49,10 @@ class App extends Component{
         <Bottomslider />
         <div className="container mt-5">
         <div className="row gap-4">
-        {data.map((item)=>{
-          
-          // return <Comments img = {item.img} />;
-          return(
-            <Comments img = {item.img} name = {item.name} pattern = {item.pattern} comment = {item.comment} />
-          );
-        })}
+        {this.state.data.map((item, index)=>(
+            <Comments key={index} img = {item.img} name = {item.name} pattern = {item.pattern} comment = {item.comment} />
+        ))}
+
         </div>
         </div>
 

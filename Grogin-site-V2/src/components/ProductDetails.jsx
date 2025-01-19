@@ -7,7 +7,7 @@ const ProductDetails = () => {
 
   const {slug} = useParams();
   const [products, setProducts] = useState([])
-  const [cData, setCData] = useState({})
+  // const [cData, setCData] = useState({})
 
   useEffect(()=>{
     axios
@@ -18,11 +18,11 @@ const ProductDetails = () => {
     
   },[])
 
-  useEffect(()=>{
-    setCData(products?.find(p=>slugify(p.title, {lower:true}) === slug))
-  }, [products, slug])
+  // useEffect(()=>{
+  //   setCData(products?.find(p=>slugify(p.title, {lower:true}) === slug))
+  // }, [products, slug])
 
-  // const cData = products.find(p=>slugify(p.title, {lower:true}) == slug);
+  const cData = products.find(p=>slugify(p.title, {lower:true}) == slug);
 
   return (
     <div className="container mt-5 d-flex justify-content-center align-items-center" style={{height:"50vh"}}>

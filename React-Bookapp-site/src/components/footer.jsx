@@ -7,9 +7,10 @@ class footer extends Component {
   render() {
     return (
       <div className="container-fluid footer d-flex justify-content-center align-items-center flex-column" style={{background:"#fff2f5"}}>
-        <button className='btn hex d-flex justify-content-center align-items-cemter'><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#ffffff" height="36px" width="36px" version="1.1" id="Layer_1" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
-<polygon points="247.5,0 34.2,213.3 34.2,341.3 204.8,170.7 204.8,512 290.2,512 290.2,170.7 460.8,341.3 460.8,213.3 "/>
-</svg></button>
+        <button className='btn hex d-flex justify-content-center align-items-cemter'><svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" fill="#ffffff" height="36px" width="36px" version="1.1" id="Layer_1" viewBox="0 0 512 512" enableBackground="new 0 0 512 512" xmlSpace="preserve">
+  <polygon points="247.5,0 34.2,213.3 34.2,341.3 204.8,170.7 204.8,512 290.2,512 290.2,170.7 460.8,341.3 460.8,213.3 " />
+</svg>
+</button>
 
         <div className="logo navbar-brand d-flex justify-content-center align-items-center">
             <span></span>
