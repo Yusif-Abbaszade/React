@@ -3,13 +3,8 @@ const logolight = "https://klbtheme.com/grogin/wp-content/uploads/2023/11/grogin
 import { MdOutlineLightMode, MdDarkMode } from "react-icons/md";
 import { FiMenu } from "react-icons/fi";
 import { LuShoppingCart } from "react-icons/lu";
-import profile from '../assets/img/profile.png'
-import wishlist from '../assets/img/wishlist.png'
-import cart from '../assets/img/cart.png'
 import '../assets/css/navbar.css'
-// import search from '../assets/img/search.png'
 import sale from '../assets/img/sale.png'
-import menu from '../assets/img/menu.png'
 import { Link } from 'react-router-dom';
 import { IconContext } from "react-icons";
 import { useContext, useEffect, useState } from "react";
@@ -93,9 +88,9 @@ const Navbar = () => {
         <ul className="list-unstyled d-flex gap-2">
           <li className="navbar-item text-secondary">
             <select name="" id="setcurrencyop" style={{width:"100px", height:"30px"}} className="text-center">
-              <option value="USD" defaultChecked>USD</option>
-              <option value="AZN">AZN</option>
-              <option value="EURO">EURO</option>
+              <option value="usd" defaultChecked>usd</option>
+              <option value="azn">azn</option>
+              <option value="eur">eur</option>
             </select>
           </li>
           <li className="navbar-item text-secondary"><LangUtil EN={'Order Tracking'} AZ={'Məhsul Takibi'} /></li>

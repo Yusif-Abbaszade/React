@@ -10,7 +10,7 @@ const ProductDetails = () => {
 
   const {slug} = useParams();
   const [data] = useContext(DataContext);
-  const [currency] = useContext(PriceContext);
+  const [currency, setCurrency, currencyData] = useContext(PriceContext);
   const {addItem} = useCart();
 
   const cData = data.find(p=>slugify(p.title, {lower:true}) == slug);
@@ -23,7 +23,7 @@ const ProductDetails = () => {
             <div className="card-body w-50 d-flex flex-column justify-content-center">
                 <h2 className="card-title">{cData.title}</h2>
                 <p className="card-text mt-4">{cData.description}</p>
-                <p className="card-text mt-4 text-success fs-2">{currency==='USD'?cData.price:currency==='AZN'?(cData.price*1.7).toFixed(2):(cData.price*0.97).toFixed(2)} {currency}</p>
+                <p className="card-text mt-4 text-success fs-2">{currency==='usd'?cData.price:currency==='azn'?(cData.price*(1/currencyData.usd) * currencyData.azn).toFixed(2):(cData.price * (1/currencyData.usd)).toFixed(2)} {currency}</p>
                 <button className="btn btn-warning mt-4 w-50" onClick={()=>{addItem(cData)}}>Add to Card</button>
             </div>
             </div>
